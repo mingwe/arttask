@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import { List1 } from './list1'
 import { List2 } from './list2'
 
@@ -24,14 +24,16 @@ export const Task1 = () => {
 
   return (
     <div>
-      <Box my={3}>
-        <Typography variant={'h4'}>Variant 1, css/scss files</Typography>
-        <List1 itemsList={itemsList} />
-      </Box>
-      <Box my={3}>
-        <Typography variant={'h4'}>Variant 2, material styled / sx prop</Typography>
-        <List2 itemsList={itemsList} />
-      </Box>
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={6} mt={3}>
+          <Typography variant={'h5'}>Variant 1, css/scss files</Typography>
+          <List1 itemsList={itemsList} />
+        </Grid>
+        <Grid item xs={12} md={6} mt={3}>
+          <Typography variant={'h5'}>Variant 2, material styled / sx prop</Typography>
+          <List2 itemsList={itemsList} />
+        </Grid>
+      </Grid>
     </div>
   )
 }
