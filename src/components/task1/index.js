@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Typography } from '@mui/material'
-import { List1 } from '../list1'
-import { List2 } from '../list2'
+import { List1 } from './list1'
+import { List2 } from './list2'
 
 export const Task1 = () => {
 
